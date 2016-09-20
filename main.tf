@@ -5,6 +5,7 @@ resource "aws_vpc" "mod" {
 
   tags {
     Name = "${var.name}"
+    Environment = "${var.environment}"
   }
 }
 
