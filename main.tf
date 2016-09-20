@@ -19,6 +19,7 @@ resource "aws_route_table" "public" {
 
   tags {
     Name = "${var.name}-public"
+    Environment = "${var.environment}"
   }
 }
 
@@ -34,6 +35,7 @@ resource "aws_route_table" "private" {
 
   tags {
     Name = "${var.name}-private"
+    Environment = "${var.environment}"
   }
 }
 
@@ -45,6 +47,7 @@ resource "aws_subnet" "private" {
 
   tags {
     Name = "${var.name}-private"
+    Environment = "${var.environment}"
   }
 }
 
@@ -56,6 +59,7 @@ resource "aws_subnet" "public" {
 
   tags {
     Name = "${var.name}-public"
+    Environment = "${var.environment}"
   }
 
   map_public_ip_on_launch = true
