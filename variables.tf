@@ -1,4 +1,5 @@
 variable "name" {}
+variable "environment" {}
 
 variable "cidr" {}
 
